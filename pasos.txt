@@ -1,0 +1,7 @@
+
+reflex export --frontend-only
+
+change frontend to public
+
+git add .
+git commit -m "first commit"
