@@ -1,14 +1,66 @@
-"""Welcome to Reflex!."""
-
-# Import all the pages.
-from autana_web.pages import *
-
+"""Welcome to Reflex! This file outlines the steps to create a basic app."""
+from rxconfig import config
+from autana_web.components import navbar
 import reflex as rx
 
+docs_url = "https://reflex.dev/docs/getting-started/introduction/"
+filename = f"{config.app_name}/{config.app_name}.py"
 
-class State(rx.State):
-    """Define empty state to allow access to rx.State.router."""
 
 
-# Create the app.
+def index() -> rx.Component:
+    return rx.center(
+        rx.hstack(
+            rx.text("Autana Muebles"),
+        ),
+        #rx.theme_panel(),
+        rx.vstack(
+            rx.heading("Welcome to Reflex!", size="9"),
+            rx.text("Get started by editing ", rx.code(filename)),
+            rx.box(
+                rx.chakra.vstack(
+                    rx.chakra.hstack(
+                        rx.chakra.heading("Modelamos en 3D", maxW='2xl'),
+                        rx.image(
+                             src="/logo.jpg",
+                            width="100px",
+                            height="auto",
+                            border_radius="15px 50px",
+                            border="5px solid #555",
+                         ),
+                         rx.image(
+                            boxSize='80px',
+                            objectFit='cover',
+                            src='/proyectos.jpg',
+                            alt='closets',
+                         ),
+                         )
+                ),
+                rx.vstack(
+                         rx.card("This is a card", color=rx.color("grass", 8)),
+                         rx.image(
+                            src="/logo.jpg",
+                            width="100px",
+                            height="auto",
+                            border_radius="15px 50px",
+                            border="5px solid #555",
+                        ),
+                    ),
+                    
+            rx.button(
+                "Check out our docs!",
+                on_click=lambda: rx.redirect(docs_url),
+                size="4",
+            ),
+           
+            rx.logo(),
+            align="center",
+            spacing="7",
+            font_size="2em",
+        ),
+        height="100vh",
+    )
+    )
+
 app = rx.App()
+app.add_page(index)
