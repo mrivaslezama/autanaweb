@@ -1,66 +1,51 @@
-"""Welcome to Reflex! This file outlines the steps to create a basic app."""
-from rxconfig import config
-from autana_web.components import navbar
 import reflex as rx
 
-docs_url = "https://reflex.dev/docs/getting-started/introduction/"
-filename = f"{config.app_name}/{config.app_name}.py"
+#contenido
+def content():
+    return rx.box(
+        rx.heading("Welcome to My App"),
+        rx.text("This is the main content of the page."),
+    )
 
-
-
-def index() -> rx.Component:
-    return rx.center(
+def navbar():
+    return rx.hstack(
         rx.hstack(
-            rx.text("Autana Muebles"),
+            rx.image(src="/favicon.ico", width="2em"),
+            rx.heading("My App", font_size="2em"),
         ),
-        #rx.theme_panel(),
-        rx.vstack(
-            rx.heading("Welcome to Reflex!", size="9"),
-            rx.text("Get started by editing ", rx.code(filename)),
-            rx.box(
-                rx.chakra.vstack(
-                    rx.chakra.hstack(
-                        rx.chakra.heading("Modelamos en 3D", maxW='2xl'),
-                        rx.image(
-                             src="/logo.jpg",
-                            width="100px",
-                            height="auto",
-                            border_radius="15px 50px",
-                            border="5px solid #555",
-                         ),
-                         rx.image(
-                            boxSize='80px',
-                            objectFit='cover',
-                            src='/proyectos.jpg',
-                            alt='closets',
-                         ),
-                         )
-                ),
-                rx.vstack(
-                         rx.card("This is a card", color=rx.color("grass", 8)),
-                         rx.image(
-                            src="/logo.jpg",
-                            width="100px",
-                            height="auto",
-                            border_radius="15px 50px",
-                            border="5px solid #555",
-                        ),
-                    ),
-                    
-            rx.button(
-                "Check out our docs!",
-                on_click=lambda: rx.redirect(docs_url),
-                size="4",
+        rx.spacer(),
+        rx.menu.root(
+            rx.menu.trigger(
+                rx.button("Menu"),
             ),
-           
-            rx.logo(),
-            align="center",
-            spacing="7",
-            font_size="2em",
+            rx.menu.content(
+                rx.menu.item("item 1"),
+                rx.menu.separator(),
+                rx.menu.item("Item 2"),
+                rx.menu.item("Item 3"),
+            ),
         ),
-        height="100vh",
+        position="fixed",
+        top="0px",
+        background_color="lightgray",
+        padding="1em",
+        height="4em",
+        width="100%",
+        z_index="5",
     )
+
+
+
+def index():
+    return rx.fragment(
+        navbar(),
+        rx.container(
+            content(),
+            padding_top="6em",
+            max_width="60em",
+        )
     )
+
 
 app = rx.App()
 app.add_page(index)

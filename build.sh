@@ -7,3 +7,6 @@ rm -fr public
 unzip frontend.zip -d public
 rm -f frontend.zip
 deactivate
+git add .
+git commit -m "corriendo build"
+git push
