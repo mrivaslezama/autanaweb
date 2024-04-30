@@ -4,8 +4,8 @@ import reflex as rx
 def navbar():
     return rx.hstack(
         rx.hstack(
-            rx.image(src="/favicon.ico", width="2em"),
-            rx.heading("My App", font_size="2em"),
+            rx.image(src="/logo.jpg", width="2em"),
+            rx.heading("Autana Muebles", font_size="2em"),
         ),
         rx.spacer(),
         rx.menu.root(
@@ -13,11 +13,10 @@ def navbar():
                 rx.button("Menu"),
             ),
             rx.menu.content(
-                rx.menu.item("item 1"),
+                rx.menu.item("Nosotros", href= "/"),
                 rx.menu.separator(),
-                rx.menu.item("Item 2"),
-                rx.menu.item("Item 3"),
-                width="10rem",
+                rx.menu.item("Galeria"),
+                rx.menu.item("Contactanos"),
             ),
         ),
         position="fixed",

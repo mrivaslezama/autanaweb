@@ -1,14 +1,12 @@
+from __future__ import annotations
 import reflex as rx
+from typing import Callable
 
 #contenido
 def content():
     return rx.container(
         rx.vstack(
         rx.chakra.heading("Fabricantes de muebles en melamina", maxW='2xl'),
-       
-            rx.spacer(),
-            
-            rx.chakra.vstack(
                 rx.chakra.hstack(
                     rx.chakra.heading("Modelamos en 3D", maxW='2xl'),
                     rx.image(
@@ -16,23 +14,45 @@ def content():
                             objectFit='cover',
                             src='/tekaart.jpg',
                             alt='3D',
-                         ),
-            rx.spacer(),
-            
-                    rx.chakra.hstack(
-                    rx.chakra.heading("Remodelamos", maxW='2xl'),
-                    rx.image(
+                         )
+                    ),
+                #insertar fotos a la izquierda
+                rx.chakra.hstack(
+                    rx.chakra.image(
                             boxSize='300px',
                             objectFit='cover',
-                            src='/tekaart.jpg',
-                            alt='3D',
+                            src='/inclinado.jpg',
+                            alt='cocina de frente',
                          ),
-                    )
+                         rx.chakra.image(
+                            boxSize='300px',
+                            objectFit='cover',
+                            src='/bar.jpg',
+                            alt='cocina diagonal',
+                         ),
+                    rx.chakra.heading("Muebles a medida y proyectos personalizados.", maxW='2xl'),
+                    ),
+                 #insertar fotos a la derecha
+                    rx.chakra.hstack(
+                    rx.chakra.heading("Remodelación de cocinas", maxW='2xl'),
+                    rx.chakra.image(
+                            boxSize='300px',
+                            objectFit='cover',
+                            src='/cocinareal.jpg',
+                            alt='cocina de frente',
+                         ),
+                         rx.chakra.image(
+                            boxSize='300px',
+                            objectFit='cover',
+                            src='/cocina22.jpg',
+                            alt='cocina diagonal',
+                         ),
+                    ),
+
                 )
             )
-        )
-    )
-  
+
+
 
 def navbar():
     return rx.hstack(
@@ -46,7 +66,7 @@ def navbar():
                 rx.button("Menu"),
             ),
             rx.menu.content(
-                rx.menu.item("Nosotros", href= "/"),
+                rx.menu.item("Dashboard", href="/dashboard"),
                 rx.menu.separator(),
                 rx.menu.item("Galeria"),
                 rx.menu.item("Contactanos"),
