@@ -2,16 +2,43 @@ import reflex as rx
 
 #contenido
 def content():
-    return rx.box(
-        rx.heading("Welcome to My App"),
-        rx.text("This is the main content of the page."),
+    return rx.container(
+        rx.vstack(
+        rx.chakra.heading("Fabricantes de muebles en melamina", maxW='2xl'),
+       
+            rx.spacer(),
+            
+            rx.chakra.vstack(
+                rx.chakra.hstack(
+                    rx.chakra.heading("Modelamos en 3D", maxW='2xl'),
+                    rx.image(
+                            boxSize='300px',
+                            objectFit='cover',
+                            src='/tekaart.jpg',
+                            alt='3D',
+                         ),
+            rx.spacer(),
+            
+                    rx.chakra.hstack(
+                    rx.chakra.heading("Remodelamos", maxW='2xl'),
+                    rx.image(
+                            boxSize='300px',
+                            objectFit='cover',
+                            src='/tekaart.jpg',
+                            alt='3D',
+                         ),
+                    )
+                )
+            )
+        )
     )
+  
 
 def navbar():
     return rx.hstack(
         rx.hstack(
-            rx.image(src="/favicon.ico", width="2em"),
-            rx.heading("My App", font_size="2em"),
+            rx.image(src="/logo.jpg", width="2em"),
+            rx.heading("Autana Muebles", font_size="2em"),
         ),
         rx.spacer(),
         rx.menu.root(
@@ -19,10 +46,10 @@ def navbar():
                 rx.button("Menu"),
             ),
             rx.menu.content(
-                rx.menu.item("item 1"),
+                rx.menu.item("Nosotros", href= "/"),
                 rx.menu.separator(),
-                rx.menu.item("Item 2"),
-                rx.menu.item("Item 3"),
+                rx.menu.item("Galeria"),
+                rx.menu.item("Contactanos"),
             ),
         ),
         position="fixed",
