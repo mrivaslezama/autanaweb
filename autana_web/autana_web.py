@@ -1,6 +1,4 @@
-from __future__ import annotations
 import reflex as rx
-from typing import Callable
 
 #contenido
 def content():
