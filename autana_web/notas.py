@@ -32,7 +32,9 @@ deactivate
 
 
 #components ->componentes visuales que tiene reflex
+z_index = "999" siempre en la parte superior
 
+/components/navbar.py
 
 
 
