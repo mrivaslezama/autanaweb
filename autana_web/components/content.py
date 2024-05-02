@@ -11,7 +11,7 @@ def content() -> rx.Component:
                     rx.image(
                             boxSize='300px',
                             objectFit='cover',
-                            src='/tekaart.jpg',
+                            src='/proyectos.jpg',
                             alt='3D',
                          )
                     ),

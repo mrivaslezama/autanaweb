@@ -15,7 +15,7 @@ def navbar() -> rx.Component:
             rx.menu.content(
                 rx.link("Nosotros", href="/"),
                 rx.menu.separator(),
-                rx.menu.item("Galeria",shortcut="·#galeria"),
+                rx.menu.item("Galeria",shortcut="#galeria"),
                 rx.menu.item("Contactanos"),
             ),
         ),
