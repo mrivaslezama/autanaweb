@@ -3,7 +3,7 @@ import reflex as rx
 #galeria
 def galery() -> rx.Component:
     return rx.flex(
-            rx.hstack(
+            rx.vstack(
             rx.heading("Nuestros proyectos"),
         rx.hstack(
         rx.card(
@@ -38,6 +38,9 @@ def galery() -> rx.Component:
         spacing="4",
         width="100%",
         height="10vh",
-        )
+        
+        ),
+        columns="2",
+        spacing="3",
     )
 )

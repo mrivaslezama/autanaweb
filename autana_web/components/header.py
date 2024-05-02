@@ -14,5 +14,5 @@ def header() -> rx.Component:
             justify="center",
             width="100%"
         ),
-    rx.spacer()
+    rx.divider()
     
