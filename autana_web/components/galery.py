@@ -1,6 +1,6 @@
 import reflex as rx
 
-
+#galeria
 def galery() -> rx.Component:
     return rx.section(
         rx.card("Section 1"),

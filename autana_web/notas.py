@@ -34,7 +34,17 @@ deactivate
 #components ->componentes visuales que tiene reflex
 z_index = "999" siempre en la parte superior
 
+#from autana_web.components.galery import galery
 /components/navbar.py
+
+#contenedor componente donde se representan cosas en forma horizontal
+rx.hstack(
+    rx.text("Anidando componentes"),
+    rx.text("mouredev", height='40px'),
+    position="sticky"
+)
+
+
 
 
 

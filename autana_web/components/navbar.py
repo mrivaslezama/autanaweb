@@ -13,9 +13,9 @@ def navbar() -> rx.Component:
                 rx.button("Menu"),
             ),
             rx.menu.content(
-                rx.menu.item("Nosotros"),
+                rx.link("Nosotros", href="/"),
                 rx.menu.separator(),
-                rx.menu.item("Galeria"),
+                rx.menu.item("Galeria",shortcut="·#galeria"),
                 rx.menu.item("Contactanos"),
             ),
         ),
@@ -25,5 +25,5 @@ def navbar() -> rx.Component:
         padding="1em",
         height="4em",
         width="100%",
-        z_index="5",
+        z_index="999",
     )
