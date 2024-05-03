@@ -50,7 +50,10 @@ def content() -> rx.Component:
                             alt='cocina diagonal',
                          ),
                     ),
-
+                rx.divider(),
+                spacing="4",
+                direction="column",
+                align="center",
                 )
                 )
             )
