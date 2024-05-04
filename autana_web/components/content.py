@@ -5,6 +5,7 @@ def content() -> rx.Component:
     return rx.container(
         rx.flex(
         rx.vstack(
+            rx.box(
         rx.chakra.heading("Fabricantes de muebles en melamina", maxW='2xl'),
                 rx.chakra.hstack(
                     rx.chakra.heading("Modelamos en 3D", maxW='2xl'),
@@ -14,6 +15,18 @@ def content() -> rx.Component:
                             src='/proyectos.jpg',
                             alt='3D',
                          )
+                    ),
+        spacing="2",
+        width="100%",
+        flex_wrap="wrap",
+        align="center",
+        justify="center",
+        background_color="var(--accent-2)",
+        radius="full",
+        margin="24px",
+        padding="25px",
+        flex_grow="1",
+        text_align="center",
                     ),
                 #insertar fotos a la izquierda
             rx.flex(
