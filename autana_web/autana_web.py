@@ -6,14 +6,12 @@ from autana_web.components.galery import galery
 
 
 def index() -> rx.Component:
-    return rx.container(
-rx.vstack(
+    return rx.vstack(
          navbar(),
          header(),
          content(),
          galery(),
     )        
-)
 
 app = rx.App()
 app.add_page(index)
