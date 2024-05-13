@@ -11,9 +11,7 @@ def index() -> rx.Component:
          navbar(),
     rx.vstack(
          header(),
-         content(),
-         galery(),
-         spacing="4"
+
     ),
         footer()
 )

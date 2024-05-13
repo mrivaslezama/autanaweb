@@ -8,5 +8,5 @@ unzip frontend.zip -d public
 rm -f frontend.zip
 deactivate
 git add .
-git commit -m "corriendo build"
+git commit -m "styling1 build"
 git push

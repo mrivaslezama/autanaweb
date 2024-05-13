@@ -47,7 +47,26 @@ rx.hstack(
 ######
 #12-05-2024 - 20:55
 #
-#####
+#
+# Crea una carpeta que se llama views.... /views/header
+#
+def header()-> rx.Component:
+    return rx.vstack(
+        rx.avatar(name="Autana Muebles", size="9")
+    )
+
+from autana_web.components.link_button as link_button
+def links()-> rx.Component:
+    return rx.vstack(
+        link_button(),       
+    )
+
+import reflex as rx
+def link_button(text:str) -> rx.Component:
+    return rx.button("")
+
+
+##
 
 
 

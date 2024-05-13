@@ -13,10 +13,10 @@ def navbar() -> rx.Component:
                     rx.button("Menu"),
                 ),
                 rx.menu.content(
-                    rx.menu.item("item 1"),
+                    rx.menu.item("Contactanos"),
                     rx.menu.separator(),
-                    rx.menu.item("Item 2"),
-                    rx.menu.item("Item 3"),
+                    rx.menu.item("Instagram"),
+                    rx.menu.item("Nosotros"),
                     width="10rem",
                 ),
             ),

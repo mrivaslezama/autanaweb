@@ -3,28 +3,24 @@ import reflex as rx
 #contenido
 def content() -> rx.Component:
     return rx.container(
-        rx.flex(
-        rx.vstack(
-            
                 #insertar fotos a la izquierda
-            rx.flex(
                 rx.chakra.hstack(
                     rx.chakra.image(
                             boxSize='300px',
                             objectFit='cover',
                             src='/inclinado.jpg',
-                            alt='cocina de frente',
+                            alt='mueble_inclinado',
                          ),
                          rx.chakra.image(
                             boxSize='300px',
                             objectFit='cover',
-                            src='/bar.jpg',
+                            src='/cuarto1.jpg',
                             alt='cocina diagonal',
                          ),
-                    rx.chakra.heading("Muebles a medida y proyectos personalizados.", maxW='2xl'),
-                    )
+                    rx.chakra.heading("Aprovecha cada espacio disponible", maxW='2xl')
             ),
-            rx.flex(
+            rx.spacer(),
+            rx.container(
                  #insertar fotos a la derecha
                     rx.chakra.hstack(
                     rx.chakra.heading("Cocinas", maxW='2xl'),
@@ -41,11 +37,6 @@ def content() -> rx.Component:
                             alt='cocina diagonal',
                          ),
                     ),
-                rx.divider(),
-                spacing="4",
-                direction="column",
-                align="center",
-                )
+                rx.divider()
                 )
             )
-        )
