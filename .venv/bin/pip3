@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/home/miguel/reflex/autana/autana-web/.venv/bin/python
+=======
+#!/home/miguel/Documentos/Reflex/autana_web/.venv/bin/python
+>>>>>>> 75956f6 (revisando)
 # -*- coding: utf-8 -*-
 import re
 import sys
