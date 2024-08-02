@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#!/home/miguel/reflex/autana/autana-web/.venv/bin/python
-=======
-#!/home/miguel/Documentos/Reflex/autana_web/.venv/bin/python
->>>>>>> 75956f6 (revisando)
+#!/home/miguel/Documentos/Reflex/autanaweb/.venv/bin/python
 #
 # Author: Mike McKerns (mmckerns @caltech and @uqfoundation)
 # Copyright (c) 2008-2016 California Institute of Technology.

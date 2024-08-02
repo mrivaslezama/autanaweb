@@ -2,8 +2,7 @@
 *.py[cod]
 .web
 <<<<<<< HEAD
-__pycache__/
 =======
+>>>>>>> 75956f6 (revisando)
 __pycache__/
 assets/external/
->>>>>>> 75956f6 (revisando)

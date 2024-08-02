@@ -1,4 +1,4 @@
-#!/home/miguel/Documentos/Reflex/autana_web/.venv/bin/python
+#!/home/miguel/Documentos/Reflex/autanaweb/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
